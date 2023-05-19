@@ -3,7 +3,7 @@ import { AuthContext } from '../../../provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const { createUser, userUpdateProfile } = useContext(AuthContext);
+    const { createUser, logOut ,userUpdateProfile } = useContext(AuthContext);
 
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -27,6 +27,7 @@ const Register = () => {
                 form.reset()
                 setSuccess('Account has been created successfully');
                 setError('');
+                logOut()
                 navigate('/login')
 
 

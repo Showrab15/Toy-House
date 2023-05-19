@@ -3,6 +3,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 import Header from '../Header/Header';
 import Gallery from '../Gallery/Gallery';
 import Testimonial from '../Testimonial/Testimonial';
+import ShopByCategory from '../ShopByCategory/ShopByCategory';
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
         <>
         <Header></Header>
         <Gallery></Gallery>
+        <ShopByCategory></ShopByCategory>
         <Testimonial></Testimonial>
         </>
     );

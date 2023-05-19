@@ -31,9 +31,7 @@ const MyToyTable = ({ myToyTable, handleDelete, idx }) => {
             <td>{toyRating}</td>
             <td>{toyQuantity}</td>
             <th>
-<Link to={`updatedToys/${_id}`}>
-    <button className="btn btn-secondary btn-xs">Update</button>
-</Link>
+            <Link to={`/updatedToys/${_id}`}> <button className="btn btn-ghost btn-xs">Update</button></Link>
            
             </th>
 

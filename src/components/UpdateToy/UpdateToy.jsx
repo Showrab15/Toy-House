@@ -7,12 +7,12 @@ const UpdateToy = () => {
 
 
 
-    const loadedToy = useLoaderData();
-    const {_id, toyPrice, toyQuantity, toyDetails} = loadedToy;
+    const id = useLoaderData();
+    const {_id, toyPrice, toyQuantity, toyDetails} = id;
    
 // console.log(loadedCoffee)
 
-const handleUpdateCoffee = event =>{
+const handleUpdatedToy = event =>{
     event.preventDefault();
     const form = event.target;
     const toyPrice = form.toyPrice.value;
@@ -24,7 +24,7 @@ const handleUpdateCoffee = event =>{
     console.log(updatedToy)
     
 
-      fetch(`http://localhost:5000/updateToys/${_id}`,
+      fetch(`http://localhost:5000/allToys/${_id}`,
         {
             method : 'PUT',
             headers: {
@@ -52,45 +52,48 @@ const handleUpdateCoffee = event =>{
 
 
     return (
-        <div>
-        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-        <div className="modal">
-            <div className="modal-box relative">
-                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                <form >
+      <div>
+        <h2>dekha de  hjdshjdfhjddj</h2>
+          <div>
+          <div className="card-body mt-8 rounded-lg bg-[#F3F3F3]">
+                <form onSubmit={handleUpdatedToy}>
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-6  ">
+                       
 
-
+                     
+                        
+                     
+                     
+                        
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text"> Price</span>
+                                <span className="label-text">Toy Price</span>
                             </label>
-                            <input type="number" name='toyPrice' placeholder="$ Price" required className="input input-bordered" />
+                            <input type="text" name='toyPrice' placeholder="$ Price" required className="input input-bordered" />
 
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Quantity</span>
                             </label>
-                            <input type="number" name='toyQuantity' placeholder="Available quantity" required className="input input-bordered" />
+                            <input type="text" name='toyQuantity' placeholder="Available quantity" required className="input input-bordered" />
 
                         </div>
-
+                       
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Details</span>
+                                <span className="label-text">Descriptions</span>
                             </label>
-
-                            <textarea className="textarea textarea-secondary  textarea-bordered textarea-lg w-full max-w-xx" name="toyDetails" placeholder="details"></textarea>
+                            <textarea className="p-4 input input-bordered" name="toyDetails" type="text" placeholder="Toy's Details" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn bg-[#FF3811]">Update Toy</button>
+                        <button className="btn bg-[#FF3811]">Add Toy</button>
                     </div>
                 </form>
             </div>
-        </div>
     </div>
+      </div>
     );
 };
 
