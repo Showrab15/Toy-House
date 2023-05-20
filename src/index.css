@@ -15,11 +15,11 @@
   }
 
   .long-line{
-    @apply  border  border-orange-500 w-48 mx-auto mt-2
+    @apply  border border-dashed border-orange-500 w-48 mx-auto mt-2
   }
 
 .short-line{
-  @apply border border-orange-500 w-32 mx-auto mt-2
+  @apply border border-dashed border-orange-500 w-32 mx-auto mt-2
 
   }
 
@@ -28,6 +28,6 @@
   }
 
   .button{
-    @apply btn bg-[#B67ED6] btn-active
+    @apply btn bg-[#AO736E] btn-active
   }
   

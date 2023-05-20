@@ -16,7 +16,7 @@ const Gallery = () => {
     return (
         <div className="mt-8">
             <h2 className="text-center font-bold text-4xl ">Our Gallery</h2>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-8 ">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-24 ">
 
 
               {

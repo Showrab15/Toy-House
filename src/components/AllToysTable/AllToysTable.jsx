@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 const AllToysTable = ({toyTableData, index}) => {
@@ -20,7 +20,7 @@ const AllToysTable = ({toyTableData, index}) => {
         <td>{toyPrice}</td>
         <td>{toyQuantity}</td>
         <th>
-            <Link  to={`/alltoys/${_id}`}><button  className="btn btn-outline btn-xs">details</button>
+            <Link   to={`/alltoys/${_id}`}><button  className="btn btn-outline btn-xs">details</button>
 </Link>
         </th>
         </tr>

@@ -4,10 +4,12 @@ import quote from '../../assets/quote.png'
 const Testimonial = () => {
     return (
         <div className="mt-8">
-            <div className="card md:flex block h-full card-side bg-base-100 shadow-xl">
-<div className="w-full md:w-1/2">
-      <figure><img className="rounded-lg h-full" src={testimonial} alt="Movie"/></figure>
+            <div className="card  p-4 md:flex block h-full card-side bg-red-100 shadow-xl">
+<div className="w-full md:w-1/2 rounded-xl  border-dashed border-2 border-indigo-600 ">
+  <div >
+      <figure><img className="rounded-xl p-4" src={testimonial} alt="Movie"/></figure>
 
+</div>
 </div>
 
   <div className="card-body  my-auto w-full md:w-1/2">

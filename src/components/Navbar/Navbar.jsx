@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/react.svg'
 import { AuthContext } from '../../provider/AuthProvider';
+
+import logo from '../../assets/logomain.png'
 const Navbar = () => {
 
     // state for menubar mobile user
@@ -21,7 +22,7 @@ const Navbar = () => {
         <div>
             <div className='relative  bg-[#AE358A] flex items-center justify-around'>
 
-                <img className="" src={logo} alt="" />
+                <img className="w-[50px] h-[50px]" src={logo} alt="" />
                 <Link
                     to='/'
                     aria-label='toy House'
@@ -206,9 +207,9 @@ const Navbar = () => {
                                         </li>
                                         <li>
                                             {user && <NavLink
-                                                to='addToys'
-                                                aria-label='addToys'
-                                                title='addToys'
+                                                to='addtoy'
+                                                aria-label='addtoy'
+                                                title='addtoy'
                                                 className={({ isActive }) => (isActive ? 'text-red-400' : '')}
                                             >
                                                 Add Toys

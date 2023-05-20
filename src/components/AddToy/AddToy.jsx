@@ -15,7 +15,7 @@ const AddToy = () => {
         const sellerEmail = user?.email;
         const toyName = form.toyName.value;
         const toyPhoto = form.toyPhoto.value;
-        const toyPrice = form.toyPrice.value;
+        const toyPrice = parseFloat(form.toyPrice.value)
         const toyQuantity = form.toyQuantity.value;
         const toyRating = form.toyRating.value;
         const toyDetails = form.toyDetails.value;
@@ -99,7 +99,7 @@ const AddToy = () => {
                             <select className="text-input  input input-bordered" name="toyCategory"  >
                                 <option value="Sports Car">Sports Car</option>
                                 <option value="Police Cars">Police Cars</option>
-                                <option value="Fire Track Toys">Fire Track Toys</option>
+                                <option value="Mini Fire Truck">Mini Fire Truck</option>
                             </select>
                         </div>
                      
@@ -129,7 +129,7 @@ const AddToy = () => {
                             <label className="label">
                                 <span className="label-text">Descriptions</span>
                             </label>
-                            <textarea className="p-4 input input-bordered" name="toyDetails" type="text" placeholder="Toy's Details" id="" cols="30" rows="10"></textarea>
+                            <textarea className="p-4 caret-pink-500 input input-bordered" name="toyDetails" type="text" placeholder="Toy's Details" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div className="form-control mt-6">

@@ -4,9 +4,10 @@ import Header from '../Header/Header';
 import Gallery from '../Gallery/Gallery';
 import Testimonial from '../Testimonial/Testimonial';
 import ShopByCategory from '../ShopByCategory/ShopByCategory';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 const Home = () => {
-
+dynamicTitle('Home')
     //receive the loader context from authProvider by useContext
     const { loading } = useContext(AuthContext);
 
@@ -17,7 +18,7 @@ const Home = () => {
     return (
         <>
         <Header></Header>
-        <Gallery></Gallery>
+         <Gallery></Gallery> 
         <ShopByCategory></ShopByCategory>
         <Testimonial></Testimonial>
         </>

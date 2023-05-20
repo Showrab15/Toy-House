@@ -3,19 +3,29 @@ import { AuthContext } from '../../provider/AuthProvider';
 import MyToyTable from '../MyToytable/MyToyTable';
 import Swal from 'sweetalert2';
 
+
+
+
 const MyToys = () => {
 
     const {user}= useContext(AuthContext)
     const [myToys ,setToys] = useState([]);
 
 
+
+//min
+const [sort, setSort] =useState('')
+
+
+
+
     useEffect(()=>{
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`http://localhost:5000/myToys/${user?.email}?sort=${sort}`)
         .then(res => res.json())
         .then(data => {
             setToys(data)
         })
-    },[user])
+    },[user, sort])
 
    
 
@@ -31,7 +41,7 @@ const MyToys = () => {
           }).then((result) => {
             if (result.isConfirmed) {
           
-      fetch(`http://localhost:5000/addedToys/${_id}`,
+      fetch(`http://localhost:5000/myToys/${_id}`,
       {
         method : "DELETE",
       
@@ -61,10 +71,17 @@ const MyToys = () => {
     return (
         <div>
                <div className="mt-8">
-            <h2 className="text-center text-4xl font-bold  text-orange-400">My Toys {myToys.length}</h2>
+            <h2 className="text-center will-change-auto hover:will-change-scroll text-4xl italic font-bold  text-orange-400">Toys You Have Added!</h2>
+            <hr  className="long-line italic" ></hr>
+            <hr  className="short-line" ></hr>
+
 
             
-            <div className="overflow-x-auto mt-8  w-full">
+            <div className="flex justify-center my-4 gap-4">
+            <button onClick={()=> setSort('ascending')} className="btn btn-outline hover:btn-secondary"> Sort By Asecnding Price</button>
+          <button  onClick={()=> setSort('descending')} className="btn btn-outline hover:btn-secondary">Sort By Descending Price</button>
+            </div>
+               <div className="overflow-x-auto mt-8  w-full">
   <table className="table w-full">
     {/* head */}
     <thead>

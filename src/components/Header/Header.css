@@ -1,0 +1,17 @@
+.flip-up-animation {
+    animation: flipUp 0.8s ease-out both;
+    transform-origin: bottom;
+    backface-visibility: hidden;
+  }
+  
+  @keyframes flipUp {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+  

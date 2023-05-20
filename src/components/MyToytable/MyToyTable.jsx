@@ -38,7 +38,7 @@ const MyToyTable = ({ myToyTable, handleDelete, idx }) => {
 
            
             <th>
-                <button onClick={()=> handleDelete(_id)} className="btn btn-error btn-xs">Delete</button>
+                <button onClick={()=> handleDelete(_id)} className="btn btn-error btn-xs">Delete  </button>
             </th>
         </tr>
     );
