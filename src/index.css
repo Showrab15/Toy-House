@@ -2,32 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.my-container{
-    @apply px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10
-  }
 
-.title{
-  @apply text-center text-4xl  font-bold italic
+.title {
+  @apply text-center text-4xl font-bold italic
 }
-  
-  .btn-outlined{
-    @apply  font-medium  rounded-lg transition duration-200  shadow-md  md:mb-0  px-2 py-2 md:px-8 md:py-3 m-2 text-lg text-sky-500  hover:border-transparent border-2 border-cyan-200
-  }
 
-  .long-line{
-    @apply  border border-dashed border-orange-500 w-48 mx-auto mt-2
-  }
 
-.short-line{
+
+.long-line {
+  @apply border border-dashed border-orange-500 w-48 mx-auto mt-2
+}
+
+.short-line {
   @apply border border-dashed border-orange-500 w-32 mx-auto mt-2
+}
 
-  }
 
-  .event-card{
-    @apply card border-2 border-orange-600 mt-8 md:mt-0 backdrop-brightness-50 w-full bg-base-100 
-  }
 
-  .button{
-    @apply btn bg-[#AO736E] btn-active
-  }
-  
+.button {
+  @apply btn bg-[#AO736E] btn-active
+}
