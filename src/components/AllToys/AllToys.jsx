@@ -6,7 +6,7 @@ const AllToys = () => {
     const [toys ,setToys] = useState([])
 const [search , setSearch] = useState('')
     useEffect(()=>{
-        fetch('http://localhost:5000/allToys')
+        fetch('https://assignment11-server-site-blond.vercel.app/allToys')
         .then(res => res.json())
         .then(data => {
             // console.log(data);
@@ -16,7 +16,7 @@ const [search , setSearch] = useState('')
 
    
     const handleSearchBtn = () => {
-      fetch(`http://localhost:5000/searchByName/${search}`)
+      fetch(`https://assignment11-server-site-blond.vercel.app/searchByName/${search}`)
           .then(res => res.json())
           .then(data => {
               setToys(data);

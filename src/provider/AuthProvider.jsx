@@ -12,7 +12,7 @@ const googleProvider = new GoogleAuthProvider();
 
 
 
-    const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
 
 
     //state for user of the website
@@ -20,7 +20,7 @@ const googleProvider = new GoogleAuthProvider();
 
     //loader for every page of this site
     const [loading, setLoading] = useState(true)
-    
+
     //user registration method
     const createUser = (email, password) => {
         setLoading(true)

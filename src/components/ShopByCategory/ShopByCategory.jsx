@@ -23,7 +23,7 @@ const ShopByCategory = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys/${categories}`)
+    fetch(`https://assignment11-server-site-blond.vercel.app/allToys/${categories}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

@@ -24,7 +24,7 @@ const UpdateToy = () => {
         console.log(updatedToy)
 
 
-        fetch(`http://localhost:5000/updatedtoysData/${_id}`,
+        fetch(`https://assignment11-server-site-blond.vercel.app/updatedtoysData/${_id}`,
             {
                 method: 'PUT',
                 headers: {

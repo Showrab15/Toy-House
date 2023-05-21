@@ -7,10 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const MainLayout = () => {
     return (
         <>
-        <Navbar></Navbar>
+            {/* these will show in every page without error page */}
+            <Navbar></Navbar>
             <Outlet></Outlet>
-                    <ToastContainer />
-
+            <ToastContainer />
             <Footer></Footer>
         </>
     );

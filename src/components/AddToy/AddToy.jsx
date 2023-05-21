@@ -31,7 +31,7 @@ const AddToy = () => {
             toyDetails:toyDetails
         }
         console.log(addedToys)
-        fetch('http://localhost:5000/addedToys',
+        fetch(' https://assignment11-server-site-blond.vercel.app/addedToys',
         {
             method: 'POST',
             headers: {

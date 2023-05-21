@@ -20,7 +20,7 @@ const [sort, setSort] =useState('')
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myToys/${user?.email}?sort=${sort}`)
+        fetch(`https://assignment11-server-site-blond.vercel.app/myToys/${user?.email}?sort=${sort}`)
         .then(res => res.json())
         .then(data => {
             setToys(data)
@@ -41,7 +41,7 @@ const [sort, setSort] =useState('')
           }).then((result) => {
             if (result.isConfirmed) {
           
-      fetch(`http://localhost:5000/myToys/${_id}`,
+      fetch(`https://assignment11-server-site-blond.vercel.app/myToys/${_id}`,
       {
         method : "DELETE",
       
