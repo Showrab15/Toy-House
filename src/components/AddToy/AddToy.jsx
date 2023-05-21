@@ -3,10 +3,11 @@ import { AuthContext } from '../../provider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const AddToy = () => {
-    
-    const {user} = useContext(AuthContext);
-    // const [posted, setPosted] = useState([])
-    
+
+
+    //user for get the name of user 
+    const { user } = useContext(AuthContext);
+
     const handleAddToy = event => {
         event.preventDefault()
         const form = event.target;
@@ -20,44 +21,43 @@ const AddToy = () => {
         const toyRating = form.toyRating.value;
         const toyDetails = form.toyDetails.value;
         const addedToys = {
-            sellerName:sellerName,
+            sellerName: sellerName,
             toyCategory: toyCategory,
-            sellerEmail:sellerEmail,
-            toyName:toyName,
-            toyPhoto:toyPhoto,
-            toyPrice:toyPrice,
-            toyQuantity:toyQuantity,
-            toyRating:toyRating,
-            toyDetails:toyDetails
+            sellerEmail: sellerEmail,
+            toyName: toyName,
+            toyPhoto: toyPhoto,
+            toyPrice: toyPrice,
+            toyQuantity: toyQuantity,
+            toyRating: toyRating,
+            toyDetails: toyDetails
         }
         console.log(addedToys)
         fetch(' https://assignment11-server-site-blond.vercel.app/addedToys',
-        {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(addedToys)
+            {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(addedToys)
 
-            
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.insertedId){
-                Swal.fire({
-                title: 'Success!',
-                text: 'Toy Added Successful In The Toy House ',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
-              form.reset()
-              }
-        }
-        )
+
+            })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy Added Successful In The Toy House ',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    form.reset()
+                }
+            }
+            )
 
     }
-    // console.log(posted)
 
     return (
         <div>
@@ -68,20 +68,20 @@ const AddToy = () => {
                             <label className="label">
                                 <span className="label-text">Seller Name</span>
                             </label>
-                            <input type="text" name='sellerName' disabled  defaultValue={user?.displayName} placeholder="Seller Name" className="input input-bordered" />
+                            <input type="text" name='sellerName' value={user?.displayName} placeholder="Seller Name" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input type="email" name='sellerEmail' disabled defaultValue={user?.email} placeholder="Seller Email" className="input input-bordered" />
+                            <input type="email" name='sellerEmail' value={user?.email} placeholder="Seller Email" className="input input-bordered" />
                         </div>
 
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Toy Name</span>
                             </label>
-                            <input type="text" name='toyName' required placeholder="Toy Name" className="input input-bordered"/>
+                            <input type="text" name='toyName' required placeholder="Toy Name" className="input input-bordered" />
                         </div>
 
                         <div className="form-control ">
@@ -90,7 +90,7 @@ const AddToy = () => {
                             </label>
                             <input name="toyPhoto" type="text" placeholder="Toy Photo URL" className="input input-bordered" />
                         </div>
-                        
+
                         <div className="form-control">
 
                             <label className="label">
@@ -102,8 +102,8 @@ const AddToy = () => {
                                 <option value="Mini Fire Truck">Mini Fire Truck</option>
                             </select>
                         </div>
-                     
-                        
+
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Toy Price</span>
