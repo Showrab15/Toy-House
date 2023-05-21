@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const AllToysTable = ({toyTableData, index}) => {
     
+
+    //destructure data of all toys
     const {_id, sellerName, toyCategory, toyName, toyPrice, toyQuantity} = toyTableData || {};
     return (
 
