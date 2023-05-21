@@ -18,8 +18,9 @@ dynamicTitle('Home')
     return (
         <>
         <Header></Header>
+                <ShopByCategory></ShopByCategory> 
+
          <Gallery></Gallery> 
-        <ShopByCategory></ShopByCategory>
         <Testimonial></Testimonial>
         </>
     );

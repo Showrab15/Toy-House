@@ -26,13 +26,13 @@ const ShopByCategory = () => {
     fetch(`http://localhost:5000/allToys/${categories}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setCategories(data)
       });
   }, [])
 
   const marvelCars = categories.filter((item) => item.toyCategory === 'Sports Car')
-  console.log(marvelCars);
+  // console.log(marvelCars);
   const tarzenCar = categories.filter((item) => item.toyCategory === 'Police Cars')
   const fantasyCar = categories.filter((item) => item.toyCategory === 'M Fire Truck')
 

@@ -9,7 +9,7 @@ const [search , setSearch] = useState('')
         fetch('http://localhost:5000/allToys')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setToys(data);
         })
     },[])
