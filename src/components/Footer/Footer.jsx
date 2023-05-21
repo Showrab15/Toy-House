@@ -6,10 +6,10 @@ import logo from '../../assets/logomain.png'
 
 const Footer = () => {
     return (
-        <footer className="footer mt-8 p-10 bg-base-200 text-base-content">
+        <footer data-aos="zoom-in-right" className="footer mt-8 p-10 bg-base-200 text-base-content">
         <div>
-        <img className="w-[50px] h-[50px]" src={logo} alt=""/>
-          <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+        <img className="w-[50px] animate-spin  h-[50px]" src={logo} alt=""/>
+          <p>Toy House Industries Ltd.<br/>Providing reliable Toys since 1992</p>
         </div> 
         <div>
           <span className="footer-title">Toys</span> 
@@ -22,14 +22,13 @@ const Footer = () => {
           <span className="footer-title">Toy House</span> 
           <a className="link link-hover">About us</a> 
           <a className="link link-hover">Contact</a> 
-          <a className="link link-hover">Jobs</a> 
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">Add Toys</a> 
         </div> 
         <div>
           <span className="footer-title">Legal</span> 
           <a className="link link-hover">Terms of use</a> 
           <a className="link link-hover">Privacy policy</a> 
-          <a className="link link-hover">Cookie policy</a>
+          <a className="link link-hover">Copyright © Toy House - All right reserved</a>
         </div>
       </footer>
     );

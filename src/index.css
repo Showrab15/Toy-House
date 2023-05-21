@@ -4,9 +4,8 @@
 
 
 .title {
-  @apply text-center text-4xl font-bold italic
+  @apply text-center italic font-bold text-4xl 
 }
-
 
 
 .long-line {

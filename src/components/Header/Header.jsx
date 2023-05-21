@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <div>
-              <div   data-aos="wave"
+              <div  data-aos="zoom-in-up"
  className="relative mt-8 rounded-[10px]-[x] w-full h-full">
                 <img src={banner} alt="" className=" object-cover w-full h-full rounded-xl " />
                 <div className="absolute backdrop-brightness-50 w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center  flex justify-center items-center text-white">
