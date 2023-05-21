@@ -3,26 +3,28 @@ import AllToysTable from '../AllToysTable/AllToysTable';
 
 const AllToys = () => {
 
-    const [toys ,setToys] = useState([])
-const [search , setSearch] = useState('')
-    useEffect(()=>{
-        fetch('https://assignment11-server-site-blond.vercel.app/allToys')
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            setToys(data);
-        })
-    },[])
 
-   
+    //state for set toys all
+    const [toys, setToys] = useState([]);
+
+    //state for set state for serach by name
+    const [search, setSearch] = useState('');
+    useEffect(() => {
+        fetch('https://assignment11-server-site-blond.vercel.app/allToys')
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            })
+    }, [])
+
+
     const handleSearchBtn = () => {
-      fetch(`https://assignment11-server-site-blond.vercel.app/searchByName/${search}`)
-          .then(res => res.json())
-          .then(data => {
-              setToys(data);
-              console.log(data);
-          })
-  }
+        fetch(`https://assignment11-server-site-blond.vercel.app/searchByName/${search}`)
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            })
+    }
 
     return (
         <div className="mt-8">
@@ -32,40 +34,40 @@ const [search , setSearch] = useState('')
                 <button className='btn btn-secondary' onClick={handleSearchBtn}>Search</button>
             </div>
             <div className="mt-8">
-                
-                    <div className="overflow-x-auto w-full">
+
+                <div className="overflow-x-auto w-full">
                     <table className="table w-full">
-                      {/* head */}
-                      <thead>
-                        <tr>
-                         
-                          <th>#</th>
-                          <th>Seller Name</th>
-                          <th>Toy Name</th>
-                          <th> Category</th>
-                          <th> Price</th>
-                          <th> Quantity</th>
-                          <th> Details</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      
-                     {
-                        toys.map((toyTableData, index)=> <AllToysTable
-                        index={index}
-                        key={toyTableData._id}
-                            toyTableData ={toyTableData}
-                        
-                        ></AllToysTable> )
-                     }
-                       
-                       
-                      </tbody>
-                     
-                      
+                        {/* head */}
+                        <thead>
+                            <tr>
+
+                                <th>#</th>
+                                <th>Seller Name</th>
+                                <th>Toy Name</th>
+                                <th> Category</th>
+                                <th> Price</th>
+                                <th> Quantity</th>
+                                <th> Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {
+                                toys.map((toyTableData, index) => <AllToysTable
+                                    index={index}
+                                    key={toyTableData._id}
+                                    toyTableData={toyTableData}
+
+                                ></AllToysTable>)
+                            }
+
+
+                        </tbody>
+
+
                     </table>
-                  </div>
-                
+                </div>
+
             </div>
         </div>
     );
