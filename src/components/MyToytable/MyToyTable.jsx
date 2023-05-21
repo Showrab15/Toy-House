@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 const MyToyTable = ({ myToyTable, handleDelete, idx }) => {
     const { _id, sellerEmail, sellerName, toyDetails, toyName, toyPhoto, toyPrice, toyQuantity, toyRating } = myToyTable;
    
+    dynamicTitle('My-Toy-Table')
 
   
 

@@ -13,8 +13,9 @@ const Testimonial = () => {
 </div>
 
   <div className="card-body  my-auto w-full md:w-1/2">
-  <h2 className="font-bold text-4xl text-center">Client's Loves</h2>
-
+  <h2 className="title">Client's Loves</h2>
+<hr  className="long-line"/>
+<hr  className="short-line"/>
     <img className="w-[50px] h-50px]" src={quote} alt="" />
   <div className="carousel w-full">
   <div id="item1" className="carousel-item w-full">

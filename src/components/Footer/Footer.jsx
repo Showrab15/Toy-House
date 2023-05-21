@@ -6,7 +6,7 @@ import logo from '../../assets/logomain.png'
 
 const Footer = () => {
     return (
-        <footer data-aos="zoom-in-right" className="footer mt-8 p-10 bg-base-200 text-base-content">
+        <footer className="footer mt-8 p-10 bg-base-200 text-base-content">
         <div>
         <img className="w-[50px] animate-spin  h-[50px]" src={logo} alt=""/>
           <p>Toy House Industries Ltd.<br/>Providing reliable Toys since 1992</p>

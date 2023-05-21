@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 const UpdateToy = () => {
 
-
+dynamicTitle('UpdateToy')
 
 
     const id = useLoaderData();

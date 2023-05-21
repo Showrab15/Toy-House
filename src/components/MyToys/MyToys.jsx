@@ -2,11 +2,14 @@ import React, {  useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import MyToyTable from '../MyToytable/MyToyTable';
 import Swal from 'sweetalert2';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 
 
 
 const MyToys = () => {
+
+      dynamicTitle('MyToy')
 
     const {user}= useContext(AuthContext)
     const [myToys ,setToys] = useState([]);

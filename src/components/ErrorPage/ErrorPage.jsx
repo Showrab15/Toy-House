@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link, useRouteError } from 'react-router-dom';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 const ErrorPage = () => {
-    
+    dynamicTitle('404')
+
+
     //useRouterError hook for show ta error with status
     const { error, status } = useRouteError();
 

@@ -1,46 +1,38 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import dynamicTitle from '../../hooks/DynamicTitle';
 
 const ToyDetails = () => {
+  dynamicTitle('ToyDetails')
 
-    const toyData = useLoaderData();
-    console.log(toyData);
-    const {sellerEmail, toyPhoto, sellerName,toyDetails,toyName,toyPrice,toyQuantity,toyRating}= toyData;
-    return (
-//         <div className='mt-8'>
-//             <h2 className="text-4xl font-bold text-center">Know about {sellerName}'s Toy </h2>
-//            <div className="card w-full mt-8 bg-red-400">
-//   <figure><img className="m-8 rounded-lg" src={toyPhoto} alt="car!"/></figure>
-//   <div className="card-body">
-//     <h2 className="card-title">Toy Name : {toyName}</h2>
-//     <h2 className="card-title">Seller Name : {sellerName}</h2>
-//     <h2 className="card-title">Seller Email :{sellerEmail}</h2>
-//     <p>Toy Price : {toyPrice}</p>
-//     <p> Quantity :{toyQuantity}</p>
-//     <p> Rating :{toyRating}</p>
-//     <p> Description :{toyDetails}</p>
-  
-//   </div>
-// </div>
-//         </div>
+  const toyData = useLoaderData();
+  // console.log(toyData);
+  const { sellerEmail, toyCategory, toyPhoto, sellerName, toyDetails, toyName, toyPrice, toyQuantity, toyRating } = toyData;
+  return (
+    <div className="mt-4">
+      <h2 className="title">Let Know More About {toyName} </h2>
+      <hr className="long-line" />
+      <hr className="short-line" />
+      <div className="card  mt-8 lg:card-side bg-base-100 shadow-xl">
+        <figure><img className="animate-pulse" src={toyPhoto} alt="Album" /></figure>
+        <div className="card-body">
 
-<div className="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img className="animate-pulse" src={toyPhoto} alt="Album"/></figure>
-  <div className="card-body">
+          <h2 className="card-title">Toy Name : {toyName}</h2>
+          <h2 className="card-title mt-4">Seller Name : {sellerName}</h2>
+          <p className="mt-2 font-semibold ">Seller Email : {sellerEmail}</p>
 
-    <h2 className="card-title">Toy Name : {toyName}</h2>
-    <h2 className="card-title mt-4">Seller Name : {sellerName}</h2>
-        <p className="mt-2 font-semibold ">Seller Email : {sellerEmail}</p>
+          <p className="mt-2 font-semibold ">Toy Price : {toyPrice}</p>
+          <p className="mt-2 font-semibold ">Available Quantity : {toyQuantity}</p>
+          <p className="mt-2 font-semibold ">Toy Category : {toyCategory}</p>
+          <p className="mt-2 font-semibold ">Ratings : {toyRating}</p>
+          <p className="mt-2 font-semibold ">Description : {toyDetails}</p>
 
-    <p className="mt-2 font-semibold ">Toy Price : {toyPrice}</p>
-    <p className="mt-2 font-semibold ">Available Quantity : {toyQuantity}</p>
-    <p className="mt-2 font-semibold ">Ratings : {toyRating}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Listen</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    );
+
+
+  );
 };
 
 export default ToyDetails;

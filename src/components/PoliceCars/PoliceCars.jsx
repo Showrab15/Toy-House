@@ -12,22 +12,23 @@ const {user} = useContext(AuthContext);
       if (!user) {
           Swal.fire({
               title: 'Please Log in!',
-              text: 'When you log in then access this route',
+              text: 'Need to  log access this Details',
               icon: 'success',
               confirmButtonTxt: 'Okay'
           })
       }
   }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl image-full">
+        <div className="card mt-4 w-96 bg-base-100 shadow-xl image-full">
         <figure><img src={toyPhoto} alt="Shoes" /></figure>
         <div className="card-body">
-          <h2 className="card-title">{toyName}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <p>{toyPrice}</p>
-          <p>{toyRating}</p>
-          <div className="card-actions justify-end">
-          <Link to={`/alltoys/${_id}`}> <button onClick={handleShow} className='btn btn-xs btn-secondary'>View Details</button></Link>      
+          <h2 className="card-title">Toy Name : {toyName}</h2>
+          <p>Toy Price: {toyPrice}</p>
+          <p>Toy Rating : {toyRating}</p>
+                    <p> Available Toy  : {toyRating}</p>
+
+          <div className="card-actions">
+          <Link to={`/alltoys/${_id}`}> <button onClick={handleShow} className='btn  btn-secondary'>View Details</button></Link>      
               </div>
         </div>
       </div>

@@ -1,8 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
+import dynamicTitle from '../../../hooks/DynamicTitle';
 
 const Register = () => {
+
+    dynamicTitle('Register')
+
     const { createUser, logOut ,userUpdateProfile } = useContext(AuthContext);
 
     const [error, setError] = useState('');
@@ -59,10 +63,10 @@ const Register = () => {
 
 
 
-            <div className="hero-content p-0 ">
+            <div className="hero-content  mt-8 p-0 ">
 
                 <form onSubmit={handleRegister} className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
-                    <h1 className="title">Create An Account </h1>
+                    <h1 className="title">Create An Account In Toy House </h1>
                     <hr className="long-line" />
                     <hr className="short-line" />
                     <div className="w-full">

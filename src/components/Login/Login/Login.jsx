@@ -3,8 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProvider';
-
+import dynamicTitle from '../../../hooks/DynamicTitle';
 const Login = () => {
+//dynamic title
+    dynamicTitle('Login')
+
     //useContext for receive all the context from authProvider
     const { signIn, signInWithGoogle } = useContext(AuthContext);
 
@@ -78,7 +81,7 @@ const Login = () => {
     return (
         <div className="my-container">
 
-            <div className="hero-content p-0">
+            <div className="hero-content mt-8 p-0">
                 <div className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
                     <form onSubmit={handleSignIn} >
                         <h1 className="title">Login Please </h1>

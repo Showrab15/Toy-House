@@ -40,9 +40,13 @@ const ShopByCategory = () => {
 
 
 <div className="mt-8">
+
+  <h3 className="title">Shop Now By Category</h3>
+  <hr className="long-line" />
+  <hr className="short-line" />
 <Tabs>
 
-<TabList className="flex justify-center gap-12"> { sportsCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
+<TabList className="flex mt-8 justify-center gap-12"> { sportsCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
 
 { policeCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
 
@@ -50,7 +54,7 @@ const ShopByCategory = () => {
 
 
 <TabPanel>
- <div className="flex justify-center gap-8">
+ <div className="md:flex justify-center gap-8">
    {sportsCar.slice(0, 2).map((category, index) => (
   
 
@@ -65,7 +69,7 @@ const ShopByCategory = () => {
 </TabPanel>
 
 <TabPanel>
- <div className="flex justify-center gap-8">
+ <div className="md:flex justify-center gap-8">
    {policeCar.slice(0, 2).map((category, index) => (
    <PoliceCars
    category={category}
@@ -77,7 +81,7 @@ const ShopByCategory = () => {
 </TabPanel>
 
 <TabPanel>
-  <div className="flex justify-center gap-8">
+  <div className="md:flex justify-center gap-8">
   {miniFireTruck.slice(0, 2).map((category, index) => (
     <MiniFireTruck
     
