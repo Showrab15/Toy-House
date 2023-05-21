@@ -20,12 +20,12 @@ const Testimonial = () => {
   <div className="carousel w-full">
   <div id="item1" className="carousel-item w-full">
 
-<h2 className="font-semibold text-3xl italic ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum quia provident laborum nulla obcaecati ducimus. Dicta possimus commodi tempore id?</h2>
+<h2 className="font-semibold text-3xl italic ">"I am extremely pleased with my experience on the toy car website! The variety of toy cars available is impressive, and the website's user-friendly interface made it easy for me to navigate and find the perfect car for my child. The ordering process was seamless, and the delivery was prompt. My child loves the toy car."</h2>
   </div> 
   <div id="item2" className="carousel-item w-full">
-  <h2 className="font-semibold text-3xl italic ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum quia provident laborum nulla obcaecati ducimus. Dicta possimus commodi tempore id?</h2>  </div> 
+  <h2 className="font-semibold text-3xl italic ">"I recently purchased a toy car from this website, and I must say that I am thoroughly satisfied. The product quality exceeded my expectations, and the attention to detail in the design is fantastic. The website provided comprehensive product descriptions and clear images, allowing me to make an informed decision.I highly recommend this toy car website to any parent looking for high-quality toys."</h2>  </div> 
   <div id="item3" className="carousel-item w-full">
-  <h2 className="font-semibold text-3xl italic ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum quia provident laborum nulla obcaecati ducimus. Dicta possimus commodi tempore id?</h2>  </div> 
+  <h2 className="font-semibold text-3xl italic ">I had a wonderful shopping experience on this toy car website. The website's layout is visually appealing and easy to navigate, making it a breeze to browse through the extensive toy car collection. The filters and search functionality helped me quickly find the specific car I was looking for. The checkout process was simple and secure, and I appreciated the various payment options available. </h2>  </div> 
  
 </div> 
 <div className="flex justify-center w-full py-2 gap-2">
