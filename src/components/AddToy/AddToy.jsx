@@ -98,7 +98,7 @@ const AddToy = () => {
                             </label>
                             <select className="text-input  input input-bordered" name="toyCategory"  >
                                 <option value="Sports Car">Sports Car</option>
-                                <option value="Police Cars">Police Cars</option>
+                                <option value="Police Cars">Police Car</option>
                                 <option value="Mini Fire Truck">Mini Fire Truck</option>
                             </select>
                         </div>

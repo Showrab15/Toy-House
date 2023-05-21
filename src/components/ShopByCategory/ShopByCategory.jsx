@@ -31,10 +31,10 @@ const ShopByCategory = () => {
       });
   }, [])
 
-  const marvelCars = categories.filter((item) => item.toyCategory === 'Sports Car')
-  // console.log(marvelCars);
-  const tarzenCar = categories.filter((item) => item.toyCategory === 'Police Cars')
-  const fantasyCar = categories.filter((item) => item.toyCategory === 'M Fire Truck')
+  const sportsCar = categories.filter((item) => item.toyCategory === 'Sports Car')
+  // console.log(sportsCar);
+  const policeCar = categories.filter((item) => item.toyCategory === 'Police Car')
+  const miniFireTruck = categories.filter((item) => item.toyCategory === 'Mini Fire Truck')
 
   return (
 
@@ -42,16 +42,16 @@ const ShopByCategory = () => {
 <div className="mt-8">
 <Tabs>
 
-<TabList className="flex justify-center gap-12"> { marvelCars.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
+<TabList className="flex justify-center gap-12"> { sportsCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
 
-{ tarzenCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
+{ policeCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) }
 
-{ fantasyCar.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) } </ TabList>
+{ miniFireTruck.slice(0, 1).map((category, index) => ( <Tab className='btn btn-primary' key={index}>{category.toyCategory}</Tab> )) } </ TabList>
 
 
 <TabPanel>
  <div className="flex justify-center gap-8">
-   {marvelCars.slice(0, 2).map((category, index) => (
+   {sportsCar.slice(0, 2).map((category, index) => (
   
 
     <SportsCar
@@ -66,7 +66,7 @@ const ShopByCategory = () => {
 
 <TabPanel>
  <div className="flex justify-center gap-8">
-   {tarzenCar.slice(0, 2).map((category, index) => (
+   {policeCar.slice(0, 2).map((category, index) => (
    <PoliceCars
    category={category}
    key={index}
@@ -78,7 +78,7 @@ const ShopByCategory = () => {
 
 <TabPanel>
   <div className="flex justify-center gap-8">
-  {fantasyCar.slice(0, 2).map((category, index) => (
+  {miniFireTruck.slice(0, 2).map((category, index) => (
     <MiniFireTruck
     
     category={category}
